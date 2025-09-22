@@ -7,7 +7,7 @@ from langchain.agents import create_openai_tools_agent, AgentExecutor
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_core.messages import AIMessage, HumanMessage
 
-# ------------------ STREAMLIT CONFIG ------------------
+# ------------------ STREAMLIT CONFIG ----------------------
 st.set_page_config(page_title="LangChain Multi-Tool Chat", page_icon="🤖", layout="centered")
 
 # ------------------ STEP 1: API KEY INPUT ------------------
@@ -89,3 +89,4 @@ else:
         st.session_state.messages.append({"role": "assistant", "content": answer})
         st.session_state.history.append(HumanMessage(content=prompt_input))
         st.session_state.history.append(AIMessage(content=answer))
+
